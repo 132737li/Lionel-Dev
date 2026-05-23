@@ -1,8 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contact</title>
   <style>
+    /* Style par défaut (ordinateur/tablette) */
+body {
+  font-size: 18px;
+  margin: 20px;
+}
+
+/* 📱 Sur petits écrans (mobile) */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  nav ul li {
+    display: block;   /* liens du menu en colonne */
+    margin: 10px 0;
+  }
+
+  img.profil {
+    width: 120px;     /* image plus petite sur mobile */
+  }
+}
+
     /* Style général */
 body {
   background-color: aquamarine;   /* couleur du fond */
@@ -103,6 +128,21 @@ nav {
     nav ul li a:hover {
       text-decoration: underline;
     }
+    .btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366;   /* vert WhatsApp */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;   /* vert foncé au survol */
+}
+
 
   </style>
 </head>
@@ -113,6 +153,10 @@ nav {
             <li><a href="index.html">Accueil</a></li>
             <li><a href="Contact.html">Contact</a></li>
             <li><a href="Inscription.html">Inscription</a></li>
+            <li><a href="https://wa.me/25767529751" class="btn-whatsapp" target="_blank">
+              Me contacter sur WhatsApp
+            </a>
+            </li>
         </ul>
     </nav>
   <h1>Contactez-moi</h1>
@@ -210,6 +254,7 @@ nav {
         });
     });
 </script>
+
 
 </body>
 </html>
