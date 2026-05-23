@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inscription</title>
+    <style>
+        /* Style général */
+body {
+  background-color: aquamarine;   /* couleur du fond */
+  font-family: Arial, sans-serif; /* police simple et lisible */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Titres principaux */
+h1 {
+  color: darkgreen;   /* vert foncé */
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+/* Sous-titres */
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Paragraphes */
+p {
+  color: #222;
+  font-size: 16px;
+}
+
+/* Image de profil */
+img.profil {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;          /* rend l’image ronde */
+  border: 3px solid darkgreen; /* bordure verte */
+  width: 200px;                /* taille fixe */
+}
+
+/* Formulaires */
+form {
+  margin: 20px auto;
+  width: 300px;
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: green;
+}
+
+/* Footer */
+footer {
+  background-color: darkgreen;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+nav {
+      background-color: darkgreen;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Inscription.html">Inscription</a></li>
+        </ul>
+    </nav>
+    <h1>Inscrivez-vous</h1>
+
+    <form action="traitement.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="Lieu">Lieu de naissance :</label>
+        <input type="text" id="Lieu" name="Lieu" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="date">Date de naissance :</label>
+        <input type="date" id="date" name="date" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="number">Numéro de téléphone :</label>
+        <input type="tel" id="number" name="number" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="confirm-password">Confirmer votre mot de passe :</label>
+        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <!-- case a cocher -->
+        <input type="checkbox" id="conditions" name="conditions" required >
+        <label for="conditions">J’accepte les conditions d’utilisation</label><br><br>
+
+        <button type="submit">S’inscrire</button>
+    </form>
+
+    <p>Merci pour votre inscription ! Voici le code promo: <strong>LIONWIN57</strong> pour bénéficier des bonus exclusive sur votre compte 1xbet.</p>
+
+    <script>
+        function verifierFormulaire(event) {
+            event.preventDefault(); // Empêche l'envoi automatique
+
+            let valide = true;
+
+            // Supprime les anciens messages d'erreur
+            document.querySelectorAll(".erreur").forEach(function (msg) {
+                msg.remove();
+            });
+
+            // Vérifie les champs obligatoires
+            let inputs = document.querySelectorAll("form input[required], form textarea[required]");
+            inputs.forEach(function (champ) {
+                if (champ.value.trim() === "") {
+                    valide = false;
+                    champ.style.border = "2px solid red";
+
+                    // Crée un message d'erreur sous le champ
+                    let erreur = document.createElement("div");
+                    erreur.className = "erreur";
+                    erreur.style.color = "red";
+                    erreur.textContent = "Ce champ est obligatoire.";
+                    champ.insertAdjacentElement("afterend", erreur);
+                } else {
+                    champ.style.border = "1px solid #ccc";
+                }
+            });
+
+            // Vérifie les mots de passe
+            let password = document.getElementById("password");
+            let confirm = document.getElementById("confirm_password");
+            if (password && confirm) {
+                if (password.value !== confirm.value) {
+                    valide = false;
+                    let erreur = document.createElement("div");
+                    erreur.className = "erreur";
+                    erreur.style.color = "red";
+                    erreur.textContent = "Les mots de passe ne correspondent pas.";
+                    confirm.insertAdjacentElement("afterend", erreur);
+                }
+            }
+
+            // Vérifie la case des règles
+            let regles = document.getElementById("regles");
+            if (regles && !regles.checked) {
+                valide = false;
+                let erreur = document.createElement("div");
+                erreur.className = "erreur";
+                erreur.style.color = "red";
+                erreur.textContent = "Vous devez accepter les règles d’utilisation.";
+                regles.insertAdjacentElement("afterend", erreur);
+            }
+
+            // Si tout est bon, envoie le formulaire
+            if (valide) {
+                alert("Formulaire envoyé avec succès !");
+                event.target.submit();
+            }
+        }
+
+        // Attache la fonction à tous les formulaires
+        document.addEventListener("DOMContentLoaded", function () {
+            let formulaires = document.querySelectorAll("form");
+            formulaires.forEach(function (form) {
+                form.addEventListener("submit", verifierFormulaire);
+            });
+        });
+    </script>
+
+</body>
+<footer>
+    <p>&copy; 2026 Lionel - Tous droits réservés</p>
+    <p>Utilisez le code promo:<strong>LIONWIN57</strong> pour profiter de nos gros bonus de 300% pour votre depot.</p>
+    <p><a href="contact.html">Me contacter</a> | <a href="inscription.html">S’inscrire</a></p>
+</footer>
+
+
+</html>
