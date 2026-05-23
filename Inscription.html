@@ -2,8 +2,33 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Inscription</title>
     <style>
+      /* Style par défaut (ordinateur/tablette) */
+body {
+  font-size: 18px;
+  margin: 20px;
+}
+
+/* 📱 Sur petits écrans (mobile) */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  nav ul li {
+    display: block;   /* liens du menu en colonne */
+    margin: 10px 0;
+  }
+
+  img.profil {
+    width: 120px;     /* image plus petite sur mobile */
+  }
+}
+
         /* Style général */
 body {
   background-color: aquamarine;   /* couleur du fond */
