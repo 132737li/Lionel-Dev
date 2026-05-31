@@ -1,151 +1,153 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact</title>
-  <style>
-    /* Style par défaut (ordinateur/tablette) */
-body {
-  font-size: 18px;
-  margin: 20px;
-}
+    <title>Contact</title>
+    <style>
+        /* Style par défaut (ordinateur/tablette) */
+        body {
+            font-size: 18px;
+            margin: 20px;
+        }
 
-/* 📱 Sur petits écrans (mobile) */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    margin: 10px;
-  }
+        /* 📱 Sur petits écrans (mobile) */
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+                margin: 10px;
+            }
 
-  nav ul li {
-    display: block;   /* liens du menu en colonne */
-    margin: 10px 0;
-  }
+            nav ul li {
+                display: block;
+                /* liens du menu en colonne */
+                margin: 10px 0;
+            }
 
-  img.profil {
-    width: 120px;     /* image plus petite sur mobile */
-  }
-}
+            img.profil {
+                width: 120px;
+                /* image plus petite sur mobile */
+            }
+        }
 
-    /* Style général */
-body {
-  background-color: aquamarine;   /* couleur du fond */
-  font-family: Arial, sans-serif; /* police simple et lisible */
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+        /* Style général */
+        body {
+            background-color: aquamarine;
+            /* couleur du fond */
+            font-family: Arial, sans-serif;
+            /* police simple et lisible */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-/* Titres principaux */
-h1 {
-  color: darkgreen;   /* vert foncé */
-  font-size: 36px;
-  margin-top: 20px;
-}
+        /* Titres principaux */
+        h1 {
+            color: darkgreen;
+            /* vert foncé */
+            font-size: 36px;
+            margin-top: 20px;
+        }
 
-/* Sous-titres */
-h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
+        /* Sous-titres */
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-/* Paragraphes */
-p {
-  color: #222;
-  font-size: 16px;
-}
+        /* Paragraphes */
+        p {
+            color: #222;
+            font-size: 16px;
+        }
 
-/* Image de profil */
-img.profil {
-  display: block;
-  margin: 20px auto;
-  border-radius: 50%;          /* rend l’image ronde */
-  border: 3px solid darkgreen; /* bordure verte */
-  width: 200px;                /* taille fixe */
-}
+        /* Formulaires */
+        form {
+            margin: 20px auto;
+            width: 300px;
+            text-align: left;
+        }
 
-/* Formulaires */
-form {
-  margin: 20px auto;
-  width: 300px;
-  text-align: left;
-}
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
 
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
+        button {
+            padding: 10px 15px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-button {
-  padding: 10px 15px;
-  background-color: darkgreen;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        button:hover {
+            background-color: green;
+        }
 
-button:hover {
-  background-color: green;
-}
+        /* Footer */
+        footer {
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
 
-/* Footer */
-footer {
-  background-color: darkgreen;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-nav {
-      background-color: darkgreen;
-      padding: 10px;
-      text-align: center;
-    }
+        nav {
+            background-color: darkgreen;
+            padding: 10px;
+            text-align: center;
+        }
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    .btn-whatsapp {
-  display: inline-block;
-  background-color: #25D366;   /* vert WhatsApp */
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-}
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
 
-.btn-whatsapp:hover {
-  background-color: #128C7E;   /* vert foncé au survol */
-}
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: green;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: left;
+            font-weight: bold;
+            z-index: 1000;
+        }
 
-
-  </style>
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            /* vert foncé au survol */
+        }
+    </style>
 </head>
+
 <body>
     <!-- Menu -->
     <nav>
@@ -154,107 +156,109 @@ nav {
             <li><a href="Contact.html">Contact</a></li>
             <li><a href="Inscription.html">Inscription</a></li>
             <li><a href="https://wa.me/25767529751" class="btn-whatsapp" target="_blank">
-              Me contacter sur WhatsApp
-            </a>
+                    Me contacter sur WhatsApp
+                </a>
             </li>
         </ul>
     </nav>
-  <h1>Contactez-moi</h1>
-  
-  <form>
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom"><br><br>
+    <h1>Contactez-moi</h1>
 
-    <label for="prenom">Prénom :</label>
-    <input type="text" id="prenom" name="prenom"><br><br>
+    <form>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
 
-    <label for="telephone">Téléphone :</label>
-    <input type="text" id="telephone" name="telephone"><br><br>
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
 
-    <label for="email">Email :</label>
-    <input type="email" id="email" name="email"><br><br>
-    
-    <label for="message">Message :</label><br>
-    <textarea id="message" name="message"></textarea><br><br>
+        <label for="telephone">Téléphone :</label>
+        <input type="text" id="telephone" name="telephone" required><br><br>
 
-    <!-- case a cocher -->
-    <input type="checkbox" id="conditions" name="conditions" required>
-    <label for="conditions">J’accepte les conditions d’utilisation</label><br><br>
-    
-    <button type="submit">Envoyer</button>
-  </form>
-  
-  <p>N’oubliez pas d’utiliser le code promo:<strong>LIONWIN57</strong> dans vos inscriptions.</p>
-  <script>
-    function verifierFormulaire(event) {
-        event.preventDefault(); // Empêche l'envoi automatique
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-        let valide = true;
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
 
-        // Supprime les anciens messages d'erreur
-        document.querySelectorAll(".erreur").forEach(function (msg) {
-            msg.remove();
-        });
+        <!-- case a cocher -->
+        <input type="checkbox" id="conditions" name="conditions" required>
+        <label for="conditions">J'accepte les conditions d'utilisation</label><br><br>
 
-        // Vérifie les champs obligatoires
-        let inputs = document.querySelectorAll("form input[required], form textarea[required]");
-        inputs.forEach(function (champ) {
-            if (champ.value.trim() === "") {
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <p>N’oubliez pas d’utiliser le code promo:<strong>LIONWIN57</strong> dans vos inscriptions.</p>
+    <script>
+        alert("Bienvenue sur la page de contact")
+        function verifierFormulaire(event) {
+            event.preventDefault(); // Empêche l'envoi automatique
+
+            let valide = true;
+
+            // Supprime les anciens messages d'erreur
+            document.querySelectorAll(".erreur").forEach(function (msg) {
+                msg.remove();
+            });
+
+            // Vérifie les champs obligatoires
+            let inputs = document.querySelectorAll("form input[required], form textarea[required]");
+            inputs.forEach(function (champ) {
+                if (champ.value.trim() === "") {
+                    valide = false;
+                    champ.style.border = "2px solid red";
+
+                    // Crée un message d'erreur sous le champ
+                    let erreur = document.createElement("div");
+                    erreur.className = "erreur";
+                    erreur.style.color = "red";
+                    erreur.textContent = "Ce champ est obligatoire.";
+                    champ.insertAdjacentElement("afterend", erreur);
+                } else {
+                    champ.style.border = "1px solid #ccc";
+                }
+            });
+
+            // Vérifie les mots de passe
+            let password = document.getElementById("password");
+            let confirm = document.getElementById("confirm_password");
+            if (password && confirm) {
+                if (password.value !== confirm.value) {
+                    valide = false;
+                    let erreur = document.createElement("div");
+                    erreur.className = "erreur";
+                    erreur.style.color = "red";
+                    erreur.textContent = "Les mots de passe ne correspondent pas.";
+                    confirm.insertAdjacentElement("afterend", erreur);
+                }
+            }
+
+            // Vérifie la case des règles
+            let regles = document.getElementById("regles");
+            if (regles && !regles.checked) {
                 valide = false;
-                champ.style.border = "2px solid red";
-
-                // Crée un message d'erreur sous le champ
                 let erreur = document.createElement("div");
                 erreur.className = "erreur";
                 erreur.style.color = "red";
-                erreur.textContent = "Ce champ est obligatoire.";
-                champ.insertAdjacentElement("afterend", erreur);
-            } else {
-                champ.style.border = "1px solid #ccc";
+                erreur.textContent = "Vous devez accepter les règles d’utilisation.";
+                regles.insertAdjacentElement("afterend", erreur);
             }
-        });
 
-        // Vérifie les mots de passe
-        let password = document.getElementById("password");
-        let confirm = document.getElementById("confirm_password");
-        if (password && confirm) {
-            if (password.value !== confirm.value) {
-                valide = false;
-                let erreur = document.createElement("div");
-                erreur.className = "erreur";
-                erreur.style.color = "red";
-                erreur.textContent = "Les mots de passe ne correspondent pas.";
-                confirm.insertAdjacentElement("afterend", erreur);
+            // Si tout est bon, envoie le formulaire
+            if (valide) {
+                alert("Formulaire envoyé avec succès !");
+                event.target.submit();
             }
         }
 
-        // Vérifie la case des règles
-        let regles = document.getElementById("regles");
-        if (regles && !regles.checked) {
-            valide = false;
-            let erreur = document.createElement("div");
-            erreur.className = "erreur";
-            erreur.style.color = "red";
-            erreur.textContent = "Vous devez accepter les règles d’utilisation.";
-            regles.insertAdjacentElement("afterend", erreur);
-        }
-
-        // Si tout est bon, envoie le formulaire
-        if (valide) {
-            alert("Formulaire envoyé avec succès !");
-            event.target.submit();
-        }
-    }
-
-    // Attache la fonction à tous les formulaires
-    document.addEventListener("DOMContentLoaded", function () {
-        let formulaires = document.querySelectorAll("form");
-        formulaires.forEach(function (form) {
-            form.addEventListener("submit", verifierFormulaire);
+        // Attache la fonction à tous les formulaires
+        document.addEventListener("DOMContentLoaded", function () {
+            let formulaires = document.querySelectorAll("form");
+            formulaires.forEach(function (form) {
+                form.addEventListener("submit", verifierFormulaire);
+            });
         });
-    });
-</script>
+    </script>
 
 
 </body>
+
 </html>
