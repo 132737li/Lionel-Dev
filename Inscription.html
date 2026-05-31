@@ -2,134 +2,165 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Inscription</title>
     <style>
-      /* Style par défaut (ordinateur/tablette) */
-body {
-  font-size: 18px;
-  margin: 20px;
-}
+        /* Style par défaut (ordinateur/tablette) */
+        body {
+            font-size: 18px;
+            margin: 20px;
+        }
 
-/* 📱 Sur petits écrans (mobile) */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    margin: 10px;
-  }
+        /* 📱 Sur petits écrans (mobile) */
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+                margin: 10px;
+            }
 
-  nav ul li {
-    display: block;   /* liens du menu en colonne */
-    margin: 10px 0;
-  }
+            nav ul li {
+                display: block;
+                /* liens du menu en colonne */
+                margin: 10px 0;
+            }
 
-  img.profil {
-    width: 120px;     /* image plus petite sur mobile */
-  }
-}
+            img.profil {
+                width: 120px;
+                /* image plus petite sur mobile */
+            }
+        }
 
         /* Style général */
-body {
-  background-color: aquamarine;   /* couleur du fond */
-  font-family: Arial, sans-serif; /* police simple et lisible */
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+        body {
+            background-color: aquamarine;
+            /* couleur du fond */
+            font-family: Arial, sans-serif;
+            /* police simple et lisible */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-/* Titres principaux */
-h1 {
-  color: darkgreen;   /* vert foncé */
-  font-size: 36px;
-  margin-top: 20px;
-}
+        /* Titres principaux */
+        h1 {
+            color: darkgreen;
+            /* vert foncé */
+            font-size: 36px;
+            margin-top: 20px;
+        }
 
-/* Sous-titres */
-h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
+        /* Sous-titres */
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
 
-/* Paragraphes */
-p {
-  color: #222;
-  font-size: 16px;
-}
+        /* Paragraphes */
+        p {
+            color: #222;
+            font-size: 16px;
+        }
 
-/* Image de profil */
-img.profil {
-  display: block;
-  margin: 20px auto;
-  border-radius: 50%;          /* rend l’image ronde */
-  border: 3px solid darkgreen; /* bordure verte */
-  width: 200px;                /* taille fixe */
-}
+        /* Image de profil */
+        img.profil {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            /* rend l’image ronde */
+            border: 3px solid darkgreen;
+            /* bordure verte */
+            width: 200px;
+            /* taille fixe */
+        }
 
-/* Formulaires */
-form {
-  margin: 20px auto;
-  width: 300px;
-  text-align: left;
-}
+        /* Formulaires */
+        form {
+            margin: 20px auto;
+            width: 300px;
+            text-align: left;
+        }
 
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin: 5px 0;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-}
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
 
-button {
-  padding: 10px 15px;
-  background-color: darkgreen;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        button {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-button:hover {
-  background-color: green;
-}
+        button:hover {
+            background-color: green;
+        }
 
-/* Footer */
-footer {
-  background-color: darkgreen;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-nav {
-      background-color: darkgreen;
-      padding: 10px;
-      text-align: center;
-    }
+        /* Footer */
+        footer {
+            background-color: rgb(12, 226, 176);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
 
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
+        nav {
+            background-color: darkgreen;
+            padding: 10px;
+            text-align: center;
+        }
 
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-    }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        f{
+            color: rgb(10, 10, 163);
+        }
+
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: green;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: left;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            /* vert foncé au survol */
+        }
     </style>
 </head>
 
@@ -140,16 +171,33 @@ nav {
             <li><a href="index.html">Accueil</a></li>
             <li><a href="Contact.html">Contact</a></li>
             <li><a href="Inscription.html">Inscription</a></li>
+            <li><a href="https://wa.me/25767529751" class="btn-whatsapp" target="_blank">
+                    Me contacter sur WhatsApp
+                </a>
         </ul>
     </nav>
-    <h1>Inscrivez-vous</h1>
+    <h1>Inscrivez-vous sur <f> 1xbet</f>
+    </h1>
 
     <form action="traitement.php" method="post">
+
+
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom" required placeholder="Veuillez remplir ce champ"><br><br>
 
         <label for="prenom">Prénom :</label>
         <input type="text" id="prenom" name="prenom" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="nom">Code promotionnel :</label>
+        <input type="text" id="nom" name="nom" required placeholder="Veuillez remplir ce champ"><br><br>
+
+
+        <label for="Ville">Ville :</label>
+        <input type="city" id="ville" name="ville" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="Lieu">Residence :</label>
+        <input type="text" id="Lieu" name="Lieu" required placeholder="Veuillez remplir ce champ"><br><br>
+
 
         <label for="Lieu">Lieu de naissance :</label>
         <input type="text" id="Lieu" name="Lieu" required placeholder="Veuillez remplir ce champ"><br><br>
@@ -157,28 +205,31 @@ nav {
         <label for="date">Date de naissance :</label>
         <input type="date" id="date" name="date" required placeholder="Veuillez remplir ce champ"><br><br>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required placeholder="Veuillez remplir ce champ"><br><br>
-
         <label for="number">Numéro de téléphone :</label>
         <input type="tel" id="number" name="number" required placeholder="Veuillez remplir ce champ"><br><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required placeholder="Veuillez remplir ce champ"><br><br>
 
         <label for="password">Mot de passe :</label>
         <input type="password" id="password" name="password" required placeholder="Veuillez remplir ce champ"><br><br>
 
         <label for="confirm-password">Confirmer votre mot de passe :</label>
-        <input type="password" id="confirm-password" name="confirm-password" required placeholder="Veuillez remplir ce champ"><br><br>
+        <input type="password" id="confirm-password" name="confirm-password" required
+            placeholder="Veuillez remplir ce champ"><br><br>
 
         <!-- case a cocher -->
-        <input type="checkbox" id="conditions" name="conditions" required >
+        <input type="checkbox" id="conditions" name="conditions" required>
         <label for="conditions">J’accepte les conditions d’utilisation</label><br><br>
 
         <button type="submit">S’inscrire</button>
     </form>
 
-    <p>Merci pour votre inscription ! Voici le code promo: <strong>LIONWIN57</strong> pour bénéficier des bonus exclusive sur votre compte 1xbet.</p>
+    <p>Merci pour votre inscription en utilisant le code promo: <strong>LIONWIN57</strong> pour bénéficier des bonus
+        exclusive sur votre compte 1xbet.</p>
 
     <script>
+        alert("Bienvenue sur la page d'inscription,Veuillez bien utiliser le code promotionnel:LIONWIN57 en s'inscrivant sur 1xbet pour obtenir le bonus de 300% pour votre premier depot.")
         function verifierFormulaire(event) {
             event.preventDefault(); // Empêche l'envoi automatique
 
@@ -251,7 +302,8 @@ nav {
 </body>
 <footer>
     <p>&copy; 2026 Lionel - Tous droits réservés</p>
-    <p>Utilisez le code promo:<strong>LIONWIN57</strong> pour profiter de nos gros bonus de 300% pour votre depot.</p>
+    <p>Utilisez le code promo:<strong>LIONWIN57</strong> pour profiter de nos gros bonus de 300% pour votre premier
+        depot.</p>
     <p><a href="contact.html">Me contacter</a> | <a href="inscription.html">S’inscrire</a></p>
 </footer>
 
